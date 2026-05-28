@@ -302,7 +302,7 @@ section {
   position: absolute;
   right: 7px;
   color: #C4B5FD;
-  opacity: 0.4;
+  opacity: 0;
 }
 
 /* KNOB */
@@ -331,7 +331,7 @@ section {
 }
 
 [data-theme="dark"] .sun-icon {
-  opacity: 0.35;
+  opacity: 0;
 }
 /* =========================
    CONTACT
