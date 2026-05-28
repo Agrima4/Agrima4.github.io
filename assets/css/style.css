@@ -61,6 +61,11 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 /* =========================
    NAV
 ========================= */
@@ -178,13 +183,9 @@ nav {
 
   background: var(--surface);
 
-  font-size: 0.85rem;
-  line-height: 1;
-
   white-space: nowrap;
 }
 
-/* FIX ICON CONSISTENCY */
 .skill-tag img {
   width: 16px;
   height: 16px;
@@ -264,7 +265,6 @@ section {
   height: 28px;
 
   border-radius: 999px;
-
   background: var(--surface2);
   border: 1px solid var(--border);
 
@@ -276,11 +276,10 @@ section {
 
   padding: 0 6px;
 
-  cursor: pointer;
   overflow: hidden;
 }
 
-/* ICONS INSIDE TRACK ZONES */
+/* ICON ZONES */
 .toggle-icon {
   width: 18px;
   height: 18px;
@@ -291,25 +290,22 @@ section {
 
   font-size: 11px;
   z-index: 2;
-
-  transition: opacity 0.25s ease;
 }
 
 .sun-icon {
   position: absolute;
   left: 7px;
   color: #D9A441;
-  opacity: 1;
 }
 
 .moon-icon {
   position: absolute;
   right: 7px;
   color: #C4B5FD;
-  opacity: 0.35;
+  opacity: 0.4;
 }
 
-/* SLIDING KNOB */
+/* KNOB */
 .toggle-slider {
   position: absolute;
 
@@ -323,22 +319,19 @@ section {
 
   background: var(--surface);
 
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-
   transition: transform 0.3s ease;
 }
 
-/* DARK MODE STATE */
 [data-theme="dark"] .toggle-slider {
   transform: translateX(28px);
 }
 
-[data-theme="dark"] .sun-icon {
-  opacity: 0.35;
-}
-
 [data-theme="dark"] .moon-icon {
   opacity: 1;
+}
+
+[data-theme="dark"] .sun-icon {
+  opacity: 0.35;
 }
 /* =========================
    CONTACT
@@ -378,6 +371,7 @@ section {
    SOCIAL ICONS
 ========================= */
 
+/* FIX ICON SIZE CONSISTENCY */
 .social-icons a {
   width: 48px;
   height: 48px;
@@ -390,17 +384,14 @@ section {
   border-radius: 12px;
 
   background: var(--surface);
-
-  transition: all 0.25s ease;
 }
 
-/* FIX ICON SIZE CONSISTENCY */
 .social-icons img {
   width: 20px;
   height: 20px;
 
-  display: block;
   object-fit: contain;
+  display: block;
 }
 
 /* =========================
