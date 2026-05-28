@@ -1,0 +1,428 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   THEME VARIABLES
+========================= */
+
+[data-theme="light"] {
+  --bg: #F7F5F0;
+  --surface: #FFFFFF;
+  --surface2: #F0EDE6;
+  --text: #1A1A18;
+  --muted: #6B6B65;
+  --accent: #1D6A4A;
+  --accent-light: #E1F5EE;
+  --accent-mid: #0F6E56;
+  --accent-glow: rgba(29,106,74,0.1);
+  --border: rgba(0,0,0,0.08);
+  --border-hover: rgba(29,106,74,0.4);
+  --tag-bg: #EEEDFE;
+  --tag-text: #3C3489;
+  --nav-bg: rgba(247,245,240,0.93);
+}
+
+[data-theme="dark"] {
+  --bg: #0D0D0B;
+  --surface: #141412;
+  --surface2: #1C1C19;
+  --text: #F0EDE6;
+  --muted: #807D74;
+  --accent: #A78BFA;
+  --accent-light: rgba(167,139,250,0.12);
+  --accent-mid: #C4B5FD;
+  --accent-glow: rgba(167,139,250,0.1);
+  --border: rgba(255,255,255,0.07);
+  --border-hover: rgba(167,139,250,0.45);
+  --tag-bg: rgba(167,139,250,0.14);
+  --tag-text: #C4B5FD;
+  --nav-bg: rgba(13,13,11,0.93);
+}
+
+/* =========================
+   BASE
+========================= */
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   NAV
+========================= */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.2rem 2.5rem;
+
+  background: var(--nav-bg);
+  backdrop-filter: blur(14px);
+
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-wrap {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 2rem;
+}
+
+.hero-center {
+  max-width: 760px;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-main-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-frame {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2rem auto;
+  border: 3px solid var(--border);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 3rem;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.45rem 0.9rem;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: var(--surface);
+
+  font-size: 0.85rem;
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+/* FIX ICON CONSISTENCY */
+.skill-tag img {
+  width: 16px;
+  height: 16px;
+
+  display: block;
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+/* =========================
+   SECTION
+========================= */
+
+section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.section-label {
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* =========================
+   PROJECTS + EXPERIENCE
+========================= */
+
+.projects-grid,
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-card,
+.exp-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2rem;
+  transition: all 0.25s ease;
+}
+
+.project-card:hover,
+.exp-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 10px 30px var(--accent-glow);
+}
+
+.project-title,
+.exp-role {
+  font-family: 'DM Serif Display', serif;
+  margin: 0.5rem 0;
+}
+
+.project-desc,
+.exp-detail {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* =========================
+   TOGGLE
+========================= */
+
+.theme-toggle {
+  width: 56px;
+  height: 28px;
+
+  border-radius: 999px;
+
+  background: var(--surface2);
+  border: 1px solid var(--border);
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6px;
+
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* ICONS INSIDE TRACK ZONES */
+.toggle-icon {
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  z-index: 2;
+
+  transition: opacity 0.25s ease;
+}
+
+.sun-icon {
+  position: absolute;
+  left: 7px;
+  color: #D9A441;
+  opacity: 1;
+}
+
+.moon-icon {
+  position: absolute;
+  right: 7px;
+  color: #C4B5FD;
+  opacity: 0.35;
+}
+
+/* SLIDING KNOB */
+.toggle-slider {
+  position: absolute;
+
+  top: 3px;
+  left: 3px;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  background: var(--surface);
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+  transition: transform 0.3s ease;
+}
+
+/* DARK MODE STATE */
+[data-theme="dark"] .toggle-slider {
+  transform: translateX(28px);
+}
+
+[data-theme="dark"] .sun-icon {
+  opacity: 0.35;
+}
+
+[data-theme="dark"] .moon-icon {
+  opacity: 1;
+}
+/* =========================
+   CONTACT
+========================= */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.form-submit {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--bg);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form-submit:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.social-icons a {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  background: var(--surface);
+
+  transition: all 0.25s ease;
+}
+
+/* FIX ICON SIZE CONSISTENCY */
+.social-icons img {
+  width: 20px;
+  height: 20px;
+
+  display: block;
+  object-fit: contain;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
