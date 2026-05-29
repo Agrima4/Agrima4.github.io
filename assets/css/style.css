@@ -172,15 +172,26 @@ nav {
 }
 
 .hero-eyebrow {
-  color: var(--accent);
-  margin-bottom: 1rem;
-  letter-spacing: 0.12em;
+  color: var(--text);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-style: italic;
+  font-family: 'DM Serif Display', serif;
+
+  /* accent highlight underline */
+  /* display: inline-block;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.2rem; */
 }
 
 .hero-main-title {
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
+  color: var(--accent);
 }
 /* HERO REVEAL */
 
@@ -198,6 +209,64 @@ nav {
   opacity: 1;
   transform: translateY(0) scale(1);
   filter: blur(0);
+}
+/* ABOUT SECTION LAYOUT */
+.about-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.about-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.about-text {
+  color: var(--muted);
+  line-height: 1.85;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* SCROLL ANIMATIONS */
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-right {
+  transition-delay: 0.15s;  /* slight delay so right comes in after left */
+}
+
+.reveal-left.visible,
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+.typing-text {
+  font-weight: 300;
 }
 
 /* CANVAS */
@@ -354,10 +423,11 @@ input[type="checkbox"] {
 
 /* MAIN TOGGLE TRACK */
 .container label {
-    width: 56px;
+    width: 68px;
     height: 28px;
 
-    background-color: #3b92d9;
+    /* background-color: #3b92d9; */
+    background-color: #5ba3e0;
     display: block;
 
     border-radius: 999px;
@@ -402,10 +472,11 @@ input[type="checkbox"] {
 .sun {
     position: absolute;
 
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
 
-    background-color: rgb(255, 238, 4);
+    /* background-color: rgb(255, 238, 4); */
+    background-color: #FFD700;
     border-radius: 50%;
 
     right: 14px;
@@ -431,7 +502,8 @@ input[type="checkbox"] {
 .cloud2,
 .cloud3 {
     position: absolute;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: rgba(255,255,255,0.95);
     border-radius: 50%;
 }
 
@@ -538,7 +610,7 @@ input[type="checkbox"] {
 
 /* MOVE KNOB */
 input[type="checkbox"]:checked + label .circle {
-    transform: translateX(28px);
+    transform: translateX(40px);
 }
 
 /* DARK MODE BACKGROUND */
@@ -571,61 +643,145 @@ input[type="checkbox"]:checked + label .dark_theme .moon {
    CONTACT
 ========================= */
 
-.contact-layout {
+.contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 5rem;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+/* FORM — compact inputs */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contact-form label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 1rem;
-  border-radius: 10px;
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--surface2);
   color: var(--text);
+  font-size: 0.9rem;
+  font-family: 'DM Sans', sans-serif;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* DARK MODE — more visible */
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-textarea {
+  background: #1e1e1c;
+  border-color: rgba(255,255,255,0.12);
+  color: #F0EDE6;
+}
+
+[data-theme="dark"] .form-input::placeholder,
+[data-theme="dark"] .form-textarea::placeholder {
+  color: rgba(240,237,230,0.3);
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
 }
 
 .form-submit {
-  padding: 1rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1.2rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   background: var(--accent);
-  color: var(--bg);
+  color: #fff;
+  font-size: 0.9rem;
   cursor: pointer;
+  align-self: flex-start;   /* button only as wide as its text */
   transition: 0.2s;
 }
 
 .form-submit:hover {
   transform: translateY(-2px);
+  opacity: 0.9;
 }
 
-/* =========================
-   SOCIAL ICONS
-========================= */
-
-/* FIX ICON SIZE CONSISTENCY */
-.social-icons a {
-  width: 48px;
-  height: 48px;
-
+/* RIGHT TAGLINE */
+.contact-quote {
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid var(--border);
-  border-radius: 12px;
-
-  background: var(--surface);
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-.social-icons img {
-  width: 20px;
-  height: 20px;
+.contact-quote-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+  color: var(--text);
+}
 
-  object-fit: contain;
+.contact-quote-text em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.contact-quote-sub {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-quote {
+    order: -1;  /* tagline above form on mobile */
+  }
+}
+
+
+/* FIX WAVE ANIMATION */
+.wave {
+  display: inline-block;
+  animation: wave 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(15deg); }
+  30% { transform: rotate(-10deg); }
+  45% { transform: rotate(12deg); }
+  60% { transform: rotate(-6deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* CONTACT SPACING FIX */
+.contact-form label {
   display: block;
+  margin: 1rem 0 0.4rem;
+  color: var(--text);
 }
 
 /* =========================
@@ -646,7 +802,56 @@ footer {
   position: relative;
   z-index: 1;
 }
+/* SOCIAL ICON ROW */
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 1.5rem;
+}
 
+.social-row a {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+
+  transition: 0.25s ease;
+}
+
+.social-row a:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.social-row a svg {
+  width: 28px;
+  height: 28px;
+  transition: 0.25s ease;
+}
+.social-row a i {
+  font-size: 28px;
+  transition: 0.25s ease;
+}
+
+/* GitHub flips to white in dark mode */
+[data-theme="dark"] .social-row a:nth-child(2) i {
+  color: #ffffff;
+}
+
+/* Light mode GitHub is black */
+.social-row a:nth-child(2) i {
+  color: #1A1A18;
+}
+/* FIX DARK MODE ICON VISIBILITY */
+/* [data-theme="dark"] .social-row img {
+  filter: brightness(0) invert(1);
+} */
 /* =========================
    MOBILE
 ========================= */

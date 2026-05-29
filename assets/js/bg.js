@@ -1,4 +1,4 @@
-
+window.scrollTo(0, 0);
 const canvas = document.getElementById("bg-canvas");
 const ctx = canvas.getContext("2d");
 

@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-store">
 <title>Agrima Gupta</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -69,144 +70,111 @@
 </nav>
 
 <!-- HERO -->
-<div class="hero-wrap">
+<section class="hero-wrap">
 
-  <div class="hero hero-new">
+  <div class="hero-center" id="hero">
 
-    <div class="hero-center">
+    <p class="hero-eyebrow">
+      Hi <span class="wave">👋</span>, I am
+    </p>
 
-      <p class="hero-eyebrow">
-        Hi 👋, I am
-      </p>
+    <h1 class="hero-main-title">
+      Agrima Gupta
+    </h1>
 
-      <h1 class="hero-main-title">
-        Agrima Gupta
-      </h1>
-
-      <div class="photo-area">
-        <div class="photo-frame">
-          <img src="./assets/images/profile.jpg" alt="Agrima Gupta">
-        </div>
-      </div>
-
-      <!-- TYPING TEXT -->
-      <h2 class="typing-text">
-        <span id="typed-text"></span>
-      </h2>
-
-      <p class="hero-desc centered-desc">
-        Data Analyst with experience across product analytics,
-        enterprise infrastructure, and healthcare research.
-
-        <br><br>
-
-        I work with SQL, Python, Tableau, and Power BI to
-        analyze data, build dashboards, and create systems
-        that help teams make faster decisions.
-      </p>
-
-      <!-- SKILLS -->
-      <div class="skills-strip centered-skills">
-
-        <span class="skill-tag">
-          <img src="assets/icons/sql.svg" alt="">SQL
-        </span>
-
-        <span class="skill-tag">
-          <img src="assets/icons/python.svg" alt="">Python
-        </span>
-
-        <span class="skill-tag">
-          <img src="assets/icons/tableau.svg" alt="">Tableau
-        </span>
-
-        <span class="skill-tag">
-          <img src="assets/icons/powerbi.svg" alt="">Power BI
-        </span>
-
-        <span class="skill-tag">
-          <img src="assets/icons/aws.svg" alt="">AWS
-        </span>
-
-        <span class="skill-tag">
-          <img src="assets/icons/excel.svg" alt="">Excel
-        </span>
-
-      </div>
-
+    <div class="photo-frame">
+      <img src="assets/images/profile.jpg" alt="profile"/>
     </div>
 
+    <h2 class="typing-text">
+      <span id="typed-text"></span>
+    </h2>
+
+    <div class="social-row">
+      <a href="mailto:agrimagupta2425@gmail.com" target="_blank">
+        <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.64l8.073-6.147C21.69 2.28 24 3.434 24 5.457z" fill="#EA4335"/>
+        </svg>
+      </a>
+      <a href="https://github.com/Agrima4" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/agrimagupta15" target="_blank">
+        <i class="fa-brands fa-linkedin" style="color:#0A66C2"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT (CENTERED EDITORIAL STYLE) -->
+<section id="about" class="about-section">
+  <div class="about-left reveal-left">
+    <h1 class="about-title">
+      From raw data<br>
+      to <em>real decisions.</em>
+    </h1>
   </div>
 
-</div>
+  <div class="about-right reveal-right">
+    <p class="about-text">
+      I enjoy working at the intersection of analytics, product thinking, and storytelling.
+      My background spans enterprise infrastructure at TCS, healthcare research at NYU Langone,
+      and product analytics at an AI startup, experiences that taught me how to work with messy
+      data, ask better questions, and build systems that help teams move faster.
+      <br><br>
+      I primarily work with SQL, Python, Tableau, and Power BI, and I'm especially interested
+      in product analytics, experimentation, and data-driven decision making.
+    </p>
+  </div>
+</section>
 
 <!-- CONTACT -->
 <section id="contact">
+  <div class="contact-wrapper">
 
-  <div class="fade-in">
-    <p class="section-label">Contact</p>
-    <h2 class="section-title">Get in touch.</h2>
-  </div>
+    <!-- LEFT: Form -->
+    <div class="contact-form-wrap">
+      <h2 class="section-title">Get in touch.</h2>
 
-  <div class="contact-layout fade-in">
+      <form class="contact-form"
+        action="https://formsubmit.co/agrimagupta2425@gmail.com"
+        method="POST">
 
-    <!-- FORM -->
-    <form
-      action="https://formsubmit.co/agrimagupta2425@gmail.com"
-      method="POST"
-      class="contact-form"
-    >
+        <input type="hidden" name="_captcha" value="false">
 
-      <input type="hidden" name="_captcha" value="false">
+        <label>Your Name</label>
+        <input type="text" class="form-input" name="name" placeholder="Jane Doe"/>
 
-      <div class="form-group">
-        <label class="form-label">Your name</label>
-        <input type="text" class="form-input" name="name" required>
-      </div>
+        <label>Your Email</label>
+        <input type="email" class="form-input" name="email" placeholder="jane@email.com"/>
 
-      <div class="form-group">
-        <label class="form-label">Your email</label>
-        <input type="email" class="form-input" name="email" required>
-      </div>
+        <label>Message</label>
+        <textarea class="form-textarea" name="message" placeholder="Hey Agrima..."></textarea>
 
-      <div class="form-group">
-        <label class="form-label">Message</label>
-        <textarea class="form-textarea" name="message" required></textarea>
-      </div>
+        <button class="form-submit">Send Message →</button>
+      </form>
+    </div>
 
-      <button type="submit" class="form-submit">
-        Send Message →
-      </button>
-
-    </form>
-
-    <!-- SOCIAL ICONS -->
-    <div class="social-icons">
-
-      <a href="mailto:agrimagupta2425@gmail.com" aria-label="Email">
-        <img src="assets/icons/mail.svg" alt="">
-      </a>
-
-      <a href="https://github.com/Agrima4" target="_blank" aria-label="GitHub">
-        <img src="assets/icons/github.svg" alt="">
-      </a>
-
-      <a href="https://linkedin.com/in/agrimagupta15" target="_blank" aria-label="LinkedIn">
-        <img src="assets/icons/linkedin.svg" alt="">
-      </a>
-
+    <!-- RIGHT: Tagline -->
+    <div class="contact-quote">
+      <p class="contact-quote-text">
+        Good data tells a story.<br>
+        <em>Let's write one together.</em>
+      </p>
+      <span class="contact-quote-sub">Open to full-time roles, freelance & collabs.</span>
     </div>
 
   </div>
-
 </section>
 
 <footer>
-  <p>Agrima Gupta · Data Analyst · 2026</p>
+  Agrima Gupta · Data Analyst · 2026
 </footer>
-<script src="assets/js/theme.js"></script>
-<script src="assets/js/bg.js"></script>
+
 <script src="assets/js/main.js"></script>
+<script src="assets/js/bg.js"></script>
+<script src="assets/js/theme.js"></script>
+
 
 </body>
 </html>
