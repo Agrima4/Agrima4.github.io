@@ -24,21 +24,46 @@
   <div class="nav-right">
 
     <div class="nav-links">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="nav-icon" aria-label="Home">
+        <svg viewBox="0 0 24 24" class="icon">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+      </a>
       <a href="projects.html">Projects</a>
       <a href="experience.html">Experience</a>
       <a href="index.html#contact">Contact</a>
     </div>
 
     <!-- TOGGLE (UNCHANGED STRUCTURE) -->
-    <button class="theme-toggle" id="themeToggle">
+    <div class="container">
+      <input type="checkbox" id="checkbox">
 
-      <span class="toggle-icon sun-icon">☀</span>
-      <span class="toggle-icon moon-icon">☾</span>
+      <label for="checkbox">
+          <!-- Circle that slides left and right to show toggle button state. -->
+          <div class="circle"></div>
 
-      <span class="toggle-slider"></span>
+          <!-- light theme -->
+          <div class="light_theme">
+              <div class="sun"></div>
+              <div class="clouds">
+                  <span class="cloud1"></span>
+                  <span class="cloud2"></span>
+                  <span class="cloud3"></span>
+              </div>
+          </div>
 
-    </button>
+
+            <!-- dark theme -->
+          <div class="dark_theme">
+              <div class="moon"></div>
+                <span class="star1"></span>
+                <span class="star2"></span>
+                <span class="star3"></span>
+          </div>     
+
+
+      </label>
+    </div>
 
   </div>
 </nav>
@@ -179,7 +204,8 @@
 <footer>
   <p>Agrima Gupta · Data Analyst · 2026</p>
 </footer>
-
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/bg.js"></script>
 <script src="assets/js/main.js"></script>
 
 </body>
