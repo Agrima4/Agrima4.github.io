@@ -966,14 +966,24 @@ input[type="checkbox"]:checked + label .dark_theme .moon {
   overflow: hidden;
   margin: 2rem auto;
   border: 3px solid var(--border);
-  box-shadow: 0 0 0 6px var(--accent-glow),
-              0 0 30px 8px var(--accent-glow);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 20px 6px rgba(29, 106, 74, 0.35),
+              0 0 50px 12px rgba(29, 106, 74, 0.15);
+  transition: box-shadow 0.4s ease;
+}
+
+[data-theme="dark"] .photo-frame {
+  box-shadow: 0 0 20px 6px rgba(167, 139, 250, 0.4),
+              0 0 50px 12px rgba(167, 139, 250, 0.2);
 }
 
 .photo-frame:hover {
-  box-shadow: 0 0 0 8px var(--accent-glow),
-              0 0 45px 12px var(--accent-glow);
+  box-shadow: 0 0 30px 10px rgba(29, 106, 74, 0.5),
+              0 0 70px 20px rgba(29, 106, 74, 0.2);
+}
+
+[data-theme="dark"] .photo-frame:hover {
+  box-shadow: 0 0 30px 10px rgba(167, 139, 250, 0.55),
+              0 0 70px 20px rgba(167, 139, 250, 0.25);
 }
 
 /* MOBILE */
