@@ -163,7 +163,7 @@ nav {
   border: none;
   cursor: pointer;
   padding: 4px;
-  z-index: 1001;
+  z-index: 1003;
 }
 
 .hamburger span {
@@ -196,16 +196,16 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #F7F5F0 !important;  /* force solid, no bleed */
+    width: 100vw;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2.5rem;
-    z-index: 999;
-    padding-top: 80px;
+    gap: 1.5rem;
+    z-index: 1002;
     font-size: 1.4rem;
+    /* solid background — no variables, no blur */
+    background: #F7F5F0;
   }
 
   .nav-links.open {
@@ -213,31 +213,29 @@ nav {
   }
 
   .nav-links a {
-    color: var(--text);
+    color: #1A1A18;
     font-size: 1.4rem;
-  }
-
-  /* HOME ICON — force visible */
-  .nav-links .nav-icon {
-    color: var(--text) !important;
+    text-decoration: none;
   }
 
   .nav-links .nav-icon .icon {
     width: 32px;
     height: 32px;
-    fill: var(--text) !important;
+    fill: #1A1A18;
   }
 }
 
-/* DARK MODE MENU */
 [data-theme="dark"] .nav-links {
-  background-color: #0D0D0B !important;
+  background: #0D0D0B;
+}
+
+[data-theme="dark"] .nav-links a {
+  color: #F0EDE6;
 }
 
 [data-theme="dark"] .nav-links .nav-icon .icon {
-  fill: #F0EDE6 !important;
+  fill: #F0EDE6;
 }
-
 /* =========================
    HERO
 ========================= */
@@ -619,7 +617,9 @@ section {
     flex-direction: column;
     gap: 0.2rem;
   }
-
+  .exp-page {
+    padding-top: 6rem;
+  }
   .resume-row {
     justify-content: flex-start;
   }
