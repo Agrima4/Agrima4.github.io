@@ -20,7 +20,7 @@ if (checkbox) {
 // TYPING EFFECT
 const roles = [
 'I turn data into decisions.',
-'I bridge analytics, strategy, and execution.',
+'I bridge engineering and analytics.',
 'I build systems that scale.',
 'I uncover insights behind user behavior.',
 'I transform ambiguity into measurable outcomes.'
