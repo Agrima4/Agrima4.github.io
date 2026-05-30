@@ -486,7 +486,7 @@ section {
 }
 
 .exp-section-header {
-  margin: 3rem 0 1.5rem;
+  margin: 5rem 0 1.5rem;
 }
 
 .exp-section-header .section-title {
@@ -1153,9 +1153,17 @@ input[type="checkbox"]:checked + label .dark_theme .moon {
 ========================= */
 
 footer {
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   text-align: center;
   color: var(--muted);
+  font-size: 0.88rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-sub {
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  opacity: 0.6;
 }
 
 /* keep all content above canvas */
