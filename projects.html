@@ -1,37 +1,31 @@
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects | Agrima Gupta</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-  <nav>
+<nav>
   <a href="index.html" class="nav-name">Agrima Gupta</a>
-
   <div class="nav-right">
     <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
-
     <div class="nav-links" id="navLinks">
       <a href="index.html" class="nav-icon" aria-label="Home">
-        <svg viewBox="0 0 24 24" class="icon">
-          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" class="icon"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
       </a>
       
       <a href="experience.html">Experience</a>
       <a href="projects.html">Projects</a>
       <a href="index.html#contact">Contact</a>
     </div>
-
     <div class="container">
       <input type="checkbox" id="checkbox">
       <label for="checkbox">
@@ -52,43 +46,175 @@
         </div>
       </label>
     </div>
-
   </div>
 </nav>
-<section style="padding-top:8rem;">
 
-<div class="fade-in">
-<p class="section-label">Work</p>
-<h2 class="section-title">Selected Projects</h2>
+<section class="projects-page">
+
+  <!-- DATA PROJECTS -->
+  <div class="exp-section-header fade-up">
+    <p class="section-label">Analytics & Data</p>
+    <h2 class="section-title">Data Projects</h2>
+  </div>
+
+  <div class="projects-big-grid">
+
+     <div class="project-big-card fade-up">
+      <div class="project-big-top">
+        <div class="project-big-meta">
+          <h3 class="project-big-title">Election Sentiment & Trend Analysis</h3>
+          <p class="project-big-desc">A real-time sentiment platform that mines Reddit and NYT data to quantify shifts in public opinion during election cycles, turning noise into narrative with NLP and SQL.</p>
+        </div>
+        <a href="https://github.com/Agrima4/Election_Sentiment_and_Trend_Code" target="_blank" class="project-gh-btn">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="project-tags">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>NLP</span>
+        <span>VADER</span>
+        <span>APIs</span>
+        <span>Data Analysis</span>
+      </div>
+    </div>
+
+    <div class="project-big-card fade-up">
+      <div class="project-big-top">
+        <div class="project-big-meta">
+          <h3 class="project-big-title">CloudMR</h3>
+          <p class="project-big-desc">A serverless AWS pipeline for generating and preprocessing large-scale MRI datasets, built to accelerate AI-driven healthcare research with clean, production-ready imaging data.</p>
+        </div>
+        <a href="https://github.com/Agrima4/ITP-Langone-24" target="_blank" class="project-gh-btn">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="project-tags">
+        <span>Python</span>
+        <span>AWS</span>
+        <span>Medical Imaging</span>
+        <span>ITK</span>
+        <span>ETL Pipelines</span>
+        <span>Machine Learning</span>
+      </div>
+    </div>
+    <div class="project-big-card fade-up">
+  <div class="project-big-top">
+    <div class="project-big-meta">
+      <h3 class="project-big-title">Global Economic Indicators Analysis</h3>
+      <p class="project-big-desc">A macro-scale analysis of global economic health, exploring how GDP, inflation, and employment have shifted across 100+ countries over a decade, with regional comparisons that reveal the diverging trajectories of developed and emerging economies.</p>
+    </div>
+    <a href="https://github.com/Agrima4/Global-Economic-Indicator-Analysis" target="_blank" class="project-gh-btn">
+      <i class="fa-brands fa-github"></i> GitHub
+    </a>
+  </div>
+  <div class="project-tags">
+    <span>Python</span>
+    <span>Excel</span>
+    <span>SQL</span>
+    <span>Data Analysis</span>
+    <span>Time Series</span>
+    <span>World Bank API</span>
+  </div>
 </div>
 
-<div class="projects-grid">
+    <div class="project-big-card fade-up">
+      <div class="project-big-top">
+        <div class="project-big-meta">
+          <h3 class="project-big-title">NYC Restaurant Health Standards Dashboard</h3>
+          <p class="project-big-desc">An interactive Tableau dashboard dissecting NYC restaurant inspection data, surfacing patterns in health violations by borough, cuisine, and time to help stakeholders act on what matters.</p>
+        </div>
+        <a href="https://public.tableau.com/app/profile/agrima.gupta/viz/gupta_agrima_assignment02/Dashboard1" target="_blank" class="project-gh-btn">
+          <i class="fa-solid fa-chart-bar"></i> View Dashboard
+        </a>
+      </div>
+      <div class="project-tags">
+        <span>Tableau</span>
+        <span>SQL</span>
+        <span>Excel</span>
+        <span>Data Visualization</span>
+        <span>Dashboard Design</span>
+      </div>
+    </div>
 
-<a href="https://github.com/Agrima4/Election_Sentiment_and_Trend_Code" target="_blank" class="project-card fade-in">
-<div>
-<span class="project-number">01</span>
-<h3 class="project-title">Election Sentiment & Trend Analysis</h3>
-<p class="project-desc">
-Analyzed 20,000+ data points from Reddit and NYT APIs to quantify voter perception shifts.
-</p>
-</div>
-<span class="project-arrow">↗</span>
-</a>
+  </div>
 
-<a href="https://github.com/Agrima4/Global-Economic-Indicator-Analysis" target="_blank" class="project-card fade-in">
-<div>
-<span class="project-number">02</span>
-<h3 class="project-title">Global Economic Indicator Analysis</h3>
-<p class="project-desc">
-Analyzed World Bank API data across 2013–2023 uncovering trends in GDP, inflation and unemployment.
-</p>
-</div>
-<span class="project-arrow">↗</span>
-</a>
+  <!-- OTHER PROJECTS -->
+  <div class="exp-section-header fade-up">
+    <p class="section-label">Engineering & Design</p>
+    <h2 class="section-title">Other Projects</h2>
+  </div>
 
-</div>
+  <div class="projects-big-grid">
+
+ 
+
+     <div class="project-big-card fade-up">
+      <div class="project-big-top">
+        <div class="project-big-meta">
+          <h3 class="project-big-title">Wardrobe Wakeup</h3>
+          <p class="project-big-desc">A data storytelling project that visualizes the hidden environmental cost of fast fashion using Tableau to translate industry data into a compelling narrative about sustainability and consumer impact.</p>
+        </div>
+        <a href="https://github.com/Agrima4/Wardrobe-Wakeup" target="_blank" class="project-gh-btn">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="project-tags">
+        <span>Tableau</span>
+        <span>Excel</span>
+        <span>Data Visualization</span>
+        <span>Data Storytelling</span>
+        <span>Sustainability</span>
+      </div>
+    </div>
+
+    <div class="project-big-card fade-up">
+      <div class="project-big-top">
+        <div class="project-big-meta">
+          <h3 class="project-big-title">Currency Detection System</h3>
+          <p class="project-big-desc">A computer vision system that verifies the authenticity of Indian currency notes using feature matching, built with OpenCV and the ORB algorithm to detect counterfeit notes in real time.</p>
+        </div>
+        <a href="https://github.com/Agrima4/Currency-Detection" target="_blank" class="project-gh-btn">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="project-tags">
+        <span>Python</span>
+        <span>OpenCV</span>
+        <span>Computer Vision</span>
+        <span>Image Processing</span>
+        <span>ORB Algorithm</span>
+      </div>
+    </div>
+
+       <div class="project-big-card fade-up">
+      <div class="project-big-top">
+        <div class="project-big-meta">
+          <h3 class="project-big-title">Customer Microservice CI/CD Pipeline</h3>
+          <p class="project-big-desc">A production-grade microservice built to demonstrate modern DevOps practices: automated testing, containerized deployment via Docker and Kubernetes, and a full CI/CD pipeline using GitHub Actions and Tekton.</p>
+        </div>
+        <a href="https://github.com/CSCI-GA-2820-SP25-003/customers" target="_blank" class="project-gh-btn">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="project-tags">
+        <span>Python</span>
+        <span>Flask</span>
+        <span>Docker</span>
+        <span>Kubernetes</span>
+        <span>GitHub Actions</span>
+        <span>Tekton</span>
+      </div>
+    </div>
+
+  </div>
 
 </section>
+
+<footer>
+  Agrima Gupta · 2026
+</footer>
+
 <script src="assets/js/theme.js"></script>
 <script src="assets/js/main.js"></script>
 
