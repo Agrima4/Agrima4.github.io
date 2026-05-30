@@ -4,35 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Experience | Agrima Gupta</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-
 <nav>
   <a href="index.html" class="nav-name">Agrima Gupta</a>
-
   <div class="nav-right">
     <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
-
     <div class="nav-links" id="navLinks">
       <a href="index.html" class="nav-icon" aria-label="Home">
-        <svg viewBox="0 0 24 24" class="icon">
-          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" class="icon"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
       </a>
-      <a href="projects.html">Projects</a>
+      
       <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
       <a href="index.html#contact">Contact</a>
     </div>
-
     <div class="container">
       <input type="checkbox" id="checkbox">
       <label for="checkbox">
@@ -53,44 +46,202 @@
         </div>
       </label>
     </div>
-
   </div>
 </nav>
 
-<section style="padding-top:8rem;">
+<section class="exp-page">
 
-<div class="fade-in">
-<p class="section-label">Background</p>
-<h2 class="section-title">Experience</h2>
-</div>
+  <!-- RESUME BUTTON -->
+  <div class="resume-row fade-up">
+    <a href="https://drive.google.com/file/d/1lu3wKgwycKfG_W_Q5DWxMEElYYG4mRHq/view?usp=sharing" target="_blank" class="resume-btn">
+      <i class="fa-solid fa-file-lines"></i> View Resume
+    </a>
+  </div>
 
-<div class="exp-list">
+  <!-- WORK EXPERIENCE -->
+  <div class="exp-section-header fade-up">
+    <p class="section-label">Work</p>
+    <h2 class="section-title">Experience</h2>
+  </div>
 
-<div class="exp-item fade-in">
-<span class="exp-period">Sep 2025 – Present</span>
-<div>
-<p class="exp-role">Data Analyst</p>
-<p class="exp-company">Kahana</p>
-<p class="exp-detail">
-Built DAU/WAU/MAU dashboards and improved dataset accuracy by 40%.
-</p>
-</div>
-</div>
+  <div class="exp-cards">
 
-<div class="exp-item fade-in">
-<span class="exp-period">Jan 2025 – May 2025</span>
-<div>
-<p class="exp-role">Data & Cloud Infrastructure Researcher</p>
-<p class="exp-company">NYU Langone Health</p>
-<p class="exp-detail">
-Built serverless data workflows on AWS reducing processing turnaround by 40%.
-</p>
-</div>
-</div>
+    <div class="exp-card fade-up">
+      <div class="exp-card-logo">
+        <img src="assets/icons/kahana.svg" alt="Kahana"/>
+      </div>
+      <div class="exp-card-body">
+        <div class="exp-card-top">
+          <div>
+            <p class="exp-card-role">AI & Data Analyst</p>
+            <p class="exp-card-company">Kahana</p>
+          </div>
+          <span class="exp-card-date">Sep 2025 – May 2026</span>
+        </div>
+        <p class="exp-card-desc">
+          Establish the data foundations that supported product development and growth. From designing synthetic data structures and shaping the 0–90 day user journey strategy to building automated reporting systems in Supabase, my work focused on turning complex ideas into actionable insights. By combining analytics, automation, and strategic thinking, enabled the team to better understand user behavior, track engagement, and make data-informed decisions at scale.
+        </p>
+        <div class="exp-tags">
+          <span>Supabase</span>
+          <span>Product Analytics</span>
+          <span>Automation</span>
+          <span>User Journey</span>
+        </div>
+      </div>
+    </div>
 
-</div>
+    <div class="exp-card fade-up">
+      <div class="exp-card-logo">
+        <img src="assets/icons/NYU.png" alt="NYU Langone"/>
+      </div>
+      <div class="exp-card-body">
+        <div class="exp-card-top">
+          <div>
+            <p class="exp-card-role">Researcher</p>
+            <p class="exp-card-company">NYU Langone Health</p>
+          </div>
+          <span class="exp-card-date">Jan 2025 – May 2025</span>
+        </div>
+        <p class="exp-card-desc">
+          Contributed to healthcare research focused on medical imaging and data-driven analysis. Developed and automated data processing pipelines for large-scale MRI datasets, streamlining workflows that supported advanced imaging research and machine learning applications. This work allowed me to combine software engineering, data processing, and research to solve complex challenges in healthcare.
+        </p>
+        <div class="exp-tags">
+          <span>AWS</span>
+          <span>Python</span>
+          <span>ML Pipelines</span>
+          <span>Medical Imaging</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card fade-up">
+      <div class="exp-card-logo">
+        <img src="assets/icons/TCS.png" alt="TCS"/>
+      </div>
+      <div class="exp-card-body">
+        <div class="exp-card-top">
+          <div>
+            <p class="exp-card-role">Technical Specialist</p>
+            <p class="exp-card-company">Tata Consultancy Services</p>
+          </div>
+          <span class="exp-card-date">Jan 2020 – May 2023</span>
+        </div>
+        <p class="exp-card-desc">
+          Worked on enterprise-scale technology solutions while leveraging data and automation to improve operational efficiency and system reliability. Collaborating with cross-functional teams, analyzed system performance, optimized processes, and supported critical business operations. worked on enterprise-scale technology solutions while leveraging data and automation to improve operational efficiency and system reliability. Collaborating with cross-functional teams, analyzed system performance, optimized processes, and supported critical business operations.
+        </p>
+        <div class="exp-tags">
+          <span>SQL</span>
+          <span>Automation</span>
+          <span>Enterprise Systems</span>
+          <span>Cross-functional</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LEADERSHIP & TEACHING -->
+  <div class="exp-section-header fade-up">
+    <p class="section-label">Beyond work</p>
+    <h2 class="section-title">Leadership & Teaching</h2>
+  </div>
+
+  <div class="exp-cards">
+
+    <div class="exp-card fade-up">
+      <div class="exp-card-logo">
+        <img src="assets/icons/NYU.png" alt="NYU"/>
+      </div>
+      <div class="exp-card-body">
+        <div class="exp-card-top">
+          <div>
+            <p class="exp-card-role">Teaching Assistant</p>
+            <p class="exp-card-company">Data Communication & Networks, NYU</p>
+          </div>
+          <span class="exp-card-date">Sep 2024 – May 2025</span>
+        </div>
+        <p class="exp-card-desc">
+          Supported students in understanding networking concepts, data communications, and network protocols. Assisted with coursework, laboratory exercises, and project evaluations while helping create an engaging learning environment. Strengthened communication, mentorship, and technical teaching skills through one-on-one student support.
+        </p>
+        <div class="exp-tags">
+          <span>Mentoring</span>
+          <span>Networking</span>
+          <span>Teaching</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card fade-up">
+      <div class="exp-card-logo">
+        <img src="assets/icons/GSC_Crest.png" alt="GSC"/>
+      </div>
+      <div class="exp-card-body">
+        <div class="exp-card-top">
+          <div>
+            <p class="exp-card-role">Director of Operations</p>
+            <p class="exp-card-company">GSAS Graduate Student Council, NYU</p>
+          </div>
+          <span class="exp-card-date">Sep 2023 – May 2025</span>
+        </div>
+        <p class="exp-card-desc">
+          Led planning and execution of initiatives serving the graduate student community at NYU. Organized large-scale events and networking opportunities, managed logistics and cross-functional collaboration, creating meaningful experiences that fostered engagement and community among students.
+        </p>
+        <div class="exp-tags">
+          <span>Leadership</span>
+          <span>Event Management</span>
+          <span>Operations</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="exp-section-header fade-up">
+    <p class="section-label">Academic</p>
+    <h2 class="section-title">Education</h2>
+  </div>
+
+  <div class="exp-cards">
+
+    <div class="exp-card fade-up">
+      <div class="exp-card-logo">
+        <img src="assets/icons/NYU.png" alt="NYU"/>
+      </div>
+      <div class="exp-card-body">
+        <div class="exp-card-top">
+          <div>
+            <p class="exp-card-role">MS in Information Systems</p>
+            <p class="exp-card-company">New York University</p>
+          </div>
+          <span class="exp-card-date">2023 – 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card fade-up">
+      <div class="exp-card-logo">
+        <img src="assets/icons/Jammu_uni.png" alt="Kahana"/>
+      </div>
+      <div class="exp-card-body">
+        <div class="exp-card-top">
+          <div>
+            <p class="exp-card-role">BE in Computer Science</p>
+            <p class="exp-card-company">Jammu University</p>
+          </div>
+          <span class="exp-card-date">2014 – 2019</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 </section>
+
+<footer>
+  Agrima Gupta · 2026
+</footer>
+
 <script src="assets/js/theme.js"></script>
 <script src="assets/js/main.js"></script>
 

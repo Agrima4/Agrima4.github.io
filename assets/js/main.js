@@ -19,11 +19,11 @@ if (checkbox) {
 
 // TYPING EFFECT
 const roles = [
-  'I am a Data Analyst.',
-  'I am interested in Product Analytics.',
-  'I build dashboards & pipelines.',
-  'I work with SQL & Python.',
-  'I love data storytelling.'
+'I turn data into decisions.',
+'I bridge analytics, strategy, and execution.',
+'I build systems that scale.',
+'I uncover insights behind user behavior.',
+'I transform ambiguity into measurable outcomes.'
 ];
 
 let roleIndex = 0;
@@ -62,7 +62,7 @@ if (typedText) {
 
 // SCROLL REVEAL
 document.addEventListener('DOMContentLoaded', () => {
-  const revealEls = document.querySelectorAll('.reveal-left, .reveal-right');
+  const revealEls = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up, .fade-up');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
